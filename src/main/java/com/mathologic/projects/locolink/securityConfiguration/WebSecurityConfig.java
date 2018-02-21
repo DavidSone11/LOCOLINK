@@ -30,6 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/login/**", "/bower_components/**").permitAll()
+                .antMatchers("/styles/**").permitAll()
                 .antMatchers("/api/custom/user/activate/**").permitAll()
                 .antMatchers("/api/v1/user/**").permitAll()
                 .anyRequest().fullyAuthenticated()
@@ -57,7 +58,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .inMemoryAuthentication()
-                .withUser("user").password("password").roles("USER");
+                .withUser("admin").password("admin").roles("USER");
     }
 
 
