@@ -10,13 +10,12 @@ var app = angular
     'flow',
     'ngResource',
     'ngSanitize',
-    'angucomplete-alt',
     'smart-table',
     'ngAnimate',
     'AxelSoft',
     'ngCookies',
     'angular-confirm',
-    'toaster',
+
     'ngSanitize'
 
   ]).factory('TokenInterceptor', function($q, $window,$location) {
